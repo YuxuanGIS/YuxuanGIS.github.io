@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://YuxuanGIS.github.io</id>
     <title>YuxuanGIS</title>
-    <updated>2020-10-01T13:24:38.003Z</updated>
+    <updated>2020-10-01T13:28:45.612Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://YuxuanGIS.github.io"/>
     <link rel="self" href="https://YuxuanGIS.github.io/atom.xml"/>
-    <subtitle>地图之美</subtitle>
+    <subtitle>地承千古人文精华，理蕴万世自然法则。</subtitle>
     <logo>https://YuxuanGIS.github.io/images/avatar.png</logo>
     <icon>https://YuxuanGIS.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, YuxuanGIS</rights>
