@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://YuxuanGIS.github.io</id>
     <title>YuxuanGIS</title>
-    <updated>2020-10-02T05:50:02.286Z</updated>
+    <updated>2020-10-02T06:15:53.629Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://YuxuanGIS.github.io"/>
     <link rel="self" href="https://YuxuanGIS.github.io/atom.xml"/>
-    <subtitle>地承千古人文精华，理蕴万世自然法则。</subtitle>
+    <subtitle>我频繁记录着，只因为生活太值得</subtitle>
     <logo>https://YuxuanGIS.github.io/images/avatar.png</logo>
     <icon>https://YuxuanGIS.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, YuxuanGIS</rights>
@@ -19,28 +19,28 @@
         <content type="html"><![CDATA[<h2 id="layer">Layer</h2>
 <p>图层是源数据的可视化表示。 OpenLayers 有四种基本类型的图层:</p>
 <ul>
-<li><code>ol/layer/Tile</code> - 呈现按特定分辨率的缩放级别组织的网格中提供拼接图像的<strong>源</strong></li>
+<li><code>ol/layer/Tile</code> - 呈现按<strong>特定分辨率的缩放级别</strong>组织的网格中提供拼接图像的源</li>
 </ul>
 <blockquote>
-<p>【Renders sources that provide tiled images in grids that are organized by zoom levels for specific resolutions. 】</p>
+<p><em>【Renders sources that provide tiled images in grids that are organized by zoom levels for specific resolutions. 】</em></p>
 </blockquote>
 <ul>
-<li><code>ol/layer/Image</code> - 呈现以任意程度和分辨率提供地图映像的源</li>
+<li><code>ol/layer/Image</code> - 呈现以<strong>任意程度和分辨率提</strong>供地图映像的源</li>
 </ul>
 <blockquote>
-<p>【Renders sources that provide map images at arbitrary extents and resolutions. 】</p>
+<p><em>【Renders sources that provide map images at arbitrary extents and resolutions. 】</em></p>
 </blockquote>
 <ul>
 <li><code>ol/layer/Vector</code> - 在客户端呈现矢量数据</li>
 </ul>
 <blockquote>
-<p>【Renders vector data client-side. 】</p>
+<p><em>【Renders vector data client-side. 】</em></p>
 </blockquote>
 <ul>
-<li><code>ol/layer/VectorTile</code> - 呈现以矢量块提供的数据</li>
+<li><code>ol/layer/VectorTile</code> - 呈现以<strong>矢量块</strong>提供的数据</li>
 </ul>
 <blockquote>
-<p>【Renders data that is provided as vector tiles】</p>
+<p>*【Renders data that is provided as vector tiles】 *</p>
 </blockquote>
 <h2 id="source">Source</h2>
 <p>为了获得一个层的远程数据，OpenLayers 使用 <code>ol/source/Source</code> 子类。可用的服务有如 OpenStreetMap 或 Bing这样免费或商业的瓦片地图，；有如WMS 或 WMTS的OGC源；也有类似 GeoJSON 或 KML 格式的矢量数据。</p>
@@ -66,8 +66,9 @@ map.setView(new View({
 }));
 </code></pre>
 <p>View有一个投影(<code>Projection</code>)。投影决定了<code>center</code>的坐标系和地图分辨率计算的单位。如果没有指定，则默认投影是 Spherical Mercator (EPSG: 3857) ，以米作为地图单位。</p>
-<p><code>zoom</code>选项是指定地图分辨率的方便方法。可用的缩放级别由 <code>maxZoom</code> (默认值: 28)、 <code>zoomFactor</code> (默认值: 2)和 <code>maxResolution</code>(默认值的计算方式是使投影的有效范围符合256x256像素贴片)决定。从缩放级别0开始，分辨率为每像素的<code>maxResolution</code>，然后通过用 <code>zoomFactor</code> 除以前一个缩放级别的分辨率来计算后续的缩放级别，直到达到<code>maxZoom</code>。</p>
+<p><code>zoom</code>选项是指定地图分辨率的方便方法。可用的缩放级别由 <code>maxZoom</code> (默认值: 28)、 <code>zoomFactor</code> (默认值: 2)和 <code>maxResolution</code>(默认值的计算方式是使投影的有效范围符合256x256像素贴片)决定。从缩放级别0开始，分辨率为每像素的<code>maxResolution</code>，然后通过<strong>用 <code>zoomFactor</code> 除以前一个缩放级别的分辨率</strong>来计算后续的缩放级别，直到达到<code>maxZoom</code>。</p>
 <h2 id="总结">总结</h2>
+<p>把上面四个整合在一起，就有了下面的完整代码：</p>
 <pre><code class="language-JavaScript">import Map from 'ol/Map';
 import View from 'ol/View';
 import OSM from 'ol/source/OSM';

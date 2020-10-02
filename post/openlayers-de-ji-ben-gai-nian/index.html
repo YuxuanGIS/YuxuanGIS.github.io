@@ -126,6 +126,9 @@ ol/layer/Tile - 呈现按特定分辨率的缩放级别组织的网格中提供�
           <li><a href="https://YuxuanGIS.github.io/talk">说说</a></li>
           
           
+          <li><a href="https://YuxuanGIS.github.io/friends">友链</a></li>
+
+          
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -168,14 +171,14 @@ ol/layer/Tile - 呈现按特定分辨率的缩放级别组织的网格中提供�
     
     <div id=side>
         <div class="avatar-border">
-            <img src="https://YuxuanGIS.github.io/images/avatar.png?v=1601617799645" class="avatar">
+            <img src="https://YuxuanGIS.github.io/images/avatar.png?v=1601619291733" class="avatar">
         </div>
         <div class="sitename">YuxuanGIS</div>
-        <span class="describtion" data-text='["地承千古人文精华，理蕴万世自然法则。"]'>&nbsp;</span>
+        <span class="describtion" data-text='["我频繁记录着，只因为生活太值得"]'>&nbsp;</span>
         
         <div class="search">
             <!-- <input type="text" class="search-input" placeholder="标题搜索(●'◡'●)" /> -->
-            <input type="text" class="search-input" placeholder="标题搜索 ⚆_⚆ つ♡">
+            <input type="text" class="search-input" placeholder="标题搜索 ⚆_⚆ biu~♡">
             <div class="search-results"></div>
         </div>
         
@@ -183,14 +186,12 @@ ol/layer/Tile - 呈现按特定分辨率的缩放级别组织的网格中提供�
         <span>社交按钮</span>
         
         
-        <a onclick="showqq()"><i style="font-size: 20px;"><img class="icon" src="https://YuxuanGIS.github.io/media/images/QQ.png" alt=""></i></a>
-        
         
         
         
         
     </div>
-    <div id="qq" style="display:none">1260480627</div>
+    <div id="qq" style="display:none"></div>
     
     
     <div class="mchocie describtion">
@@ -230,15 +231,54 @@ ol/layer/Tile - 呈现按特定分辨率的缩放级别组织的网格中提供�
     </div>
     
     
+    <div class="mchocie describtion">
+        <a href="https://YuxuanGIS.github.io/friends" class="menubutton">友人帐</a>
+    </div>
+    
     <hr>
     <div id="footinfo"> | Theme: <a
         href="https://github.com/850552586/gridea-theme-fog">Fog</a></div>
+    
+    <div class="sitetime"><div id="sitegotimeDate">载入天数...</div>
+    <div id="sitegotimes">载入时分秒...</div></div>
+    <div id="cussitetime" style="display:none">01/10/2020</div>
     
     
     </div>
 
 
 <script src="https://YuxuanGIS.github.io/media/js/wordshow.js"></script>
+    
+    <script>
+        //----------------------站点运行时间
+        var now = new Date();
+
+        function createtime() {
+            var sitegotime = document.getElementById("cussitetime").innerHTML + " 00:00:00";
+            var grt = new Date(sitegotime); //此处修改你的建站时间或者网站上线时间
+            now.setTime(now.getTime() + 250);
+            days = (now - grt) / 1000 / 60 / 60 / 24;
+            dnum = Math.floor(days);
+            hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+            hnum = Math.floor(hours);
+            if (String(hnum).length == 1) {
+                hnum = "0" + hnum;
+            }
+            minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+            mnum = Math.floor(minutes);
+            if (String(mnum).length == 1) {
+                mnum = "0" + mnum;
+            }
+            seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+            snum = Math.round(seconds);
+            if (String(snum).length == 1) {
+                snum = "0" + snum;
+            }
+            document.getElementById("sitegotimeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
+            document.getElementById("sitegotimes").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+        }
+        setInterval("createtime()", 250);
+    </script>
     
 
 
@@ -424,28 +464,28 @@ ol/layer/Tile - 呈现按特定分辨率的缩放级别组织的网格中提供�
                 <h2 id="layer">Layer</h2>
 <p>图层是源数据的可视化表示。 OpenLayers 有四种基本类型的图层:</p>
 <ul>
-<li><code>ol/layer/Tile</code> - 呈现按特定分辨率的缩放级别组织的网格中提供拼接图像的<strong>源</strong></li>
+<li><code>ol/layer/Tile</code> - 呈现按<strong>特定分辨率的缩放级别</strong>组织的网格中提供拼接图像的源</li>
 </ul>
 <blockquote>
-<p>【Renders sources that provide tiled images in grids that are organized by zoom levels for specific resolutions. 】</p>
+<p><em>【Renders sources that provide tiled images in grids that are organized by zoom levels for specific resolutions. 】</em></p>
 </blockquote>
 <ul>
-<li><code>ol/layer/Image</code> - 呈现以任意程度和分辨率提供地图映像的源</li>
+<li><code>ol/layer/Image</code> - 呈现以<strong>任意程度和分辨率提</strong>供地图映像的源</li>
 </ul>
 <blockquote>
-<p>【Renders sources that provide map images at arbitrary extents and resolutions. 】</p>
+<p><em>【Renders sources that provide map images at arbitrary extents and resolutions. 】</em></p>
 </blockquote>
 <ul>
 <li><code>ol/layer/Vector</code> - 在客户端呈现矢量数据</li>
 </ul>
 <blockquote>
-<p>【Renders vector data client-side. 】</p>
+<p><em>【Renders vector data client-side. 】</em></p>
 </blockquote>
 <ul>
-<li><code>ol/layer/VectorTile</code> - 呈现以矢量块提供的数据</li>
+<li><code>ol/layer/VectorTile</code> - 呈现以<strong>矢量块</strong>提供的数据</li>
 </ul>
 <blockquote>
-<p>【Renders data that is provided as vector tiles】</p>
+<p>*【Renders data that is provided as vector tiles】 *</p>
 </blockquote>
 <h2 id="source">Source</h2>
 <p>为了获得一个层的远程数据，OpenLayers 使用 <code>ol/source/Source</code> 子类。可用的服务有如 OpenStreetMap 或 Bing这样免费或商业的瓦片地图，；有如WMS 或 WMTS的OGC源；也有类似 GeoJSON 或 KML 格式的矢量数据。</p>
@@ -471,8 +511,9 @@ map.setView(new View({
 }));
 </code></pre>
 <p>View有一个投影(<code>Projection</code>)。投影决定了<code>center</code>的坐标系和地图分辨率计算的单位。如果没有指定，则默认投影是 Spherical Mercator (EPSG: 3857) ，以米作为地图单位。</p>
-<p><code>zoom</code>选项是指定地图分辨率的方便方法。可用的缩放级别由 <code>maxZoom</code> (默认值: 28)、 <code>zoomFactor</code> (默认值: 2)和 <code>maxResolution</code>(默认值的计算方式是使投影的有效范围符合256x256像素贴片)决定。从缩放级别0开始，分辨率为每像素的<code>maxResolution</code>，然后通过用 <code>zoomFactor</code> 除以前一个缩放级别的分辨率来计算后续的缩放级别，直到达到<code>maxZoom</code>。</p>
+<p><code>zoom</code>选项是指定地图分辨率的方便方法。可用的缩放级别由 <code>maxZoom</code> (默认值: 28)、 <code>zoomFactor</code> (默认值: 2)和 <code>maxResolution</code>(默认值的计算方式是使投影的有效范围符合256x256像素贴片)决定。从缩放级别0开始，分辨率为每像素的<code>maxResolution</code>，然后通过<strong>用 <code>zoomFactor</code> 除以前一个缩放级别的分辨率</strong>来计算后续的缩放级别，直到达到<code>maxZoom</code>。</p>
 <h2 id="总结">总结</h2>
+<p>把上面四个整合在一起，就有了下面的完整代码：</p>
 <pre><code class="language-JavaScript">import Map from 'ol/Map';
 import View from 'ol/View';
 import OSM from 'ol/source/OSM';
@@ -556,7 +597,57 @@ new Map({
                 <div id="comment"  class="comment" style="background: white">
                     <div class="commentcontainer">
                         
-                        <p>请到客户端“主题--自定义配置--valine”中填入ID和KEY</p>
+                        <style>
+
+
+    @media screen and (min-width: 1300px) {
+        .veditor::placeholder {
+            color: #b3b3b3;
+            font-size: 18px;
+            text-align: center;
+            line-height: 3rem;
+            font-family: kaiti;
+        }
+    }
+</style>
+
+<body>
+    <div id="vcomments">
+    </div>
+    <script src="https://YuxuanGIS.github.io/media/js/valine.min.js"></script>
+    <!-- <script src="https://unpkg.com/valine/dist/Valine.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: 'bHvrWpKp5uubUa0d62rMUJs5-gzGzoHsz',
+            appKey: 'CGKrIUjchPrT7jVBFngjDNF0',
+            notify: true,
+            verify: false,
+            avatar: 'retro',
+            pageSize: 10,
+            placeholder: '既然来了，何不畅所欲言呢？',
+            visitor: true, // 阅读量统计
+        });
+    </script>
+    <script type="text/javascript">
+        // jinrishici.load(function (result) {
+        //     var jrsc_plac = result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin
+        //         .dynasty + " · " + result.data.origin.author;
+        //     if (jrsc_plac != undefined)
+        //         document.getElementById("veditor").setAttribute("placeholder", jrsc_plac);
+        // 
+        var jrsc = '既然来了，何不畅所欲言呢？';
+        jinrishici.load(function (result) {
+                // 自己的处理逻辑
+                jrsc = result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin
+                 .dynasty + " · " + result.data.origin.author;
+            });
+    </script> 
+    
+</body>
+                        <div class="clear"></div>
                         
                     </div>
                 </div>
@@ -862,8 +953,8 @@ new Map({
         var rootaddr = $("#rootaddr").html();
         pl = pl.replace(rootaddr, "");
 
-        var appid = '';
-        var appkey = '';
+        var appid = 'bHvrWpKp5uubUa0d62rMUJs5-gzGzoHsz';
+        var appkey = 'CGKrIUjchPrT7jVBFngjDNF0';
         console.log(appid, appkey)
         if(AV==undefined)
             AV.init({
