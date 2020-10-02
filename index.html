@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://YuxuanGIS.github.io/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
     <link rel="stylesheet" href="https://YuxuanGIS.github.io/styles/main.css">
-    <meta name="description" content="我频繁记录着，只因为生活太值得" />
+    <meta name="description" content="GIS=Geography+IT+Study" />
     <title>YuxuanGIS</title>
 </head>
 
@@ -22,10 +22,10 @@
     
     <div id=side>
         <div class="avatar-border">
-            <img src="https://YuxuanGIS.github.io/images/avatar.png?v=1601620650302" class="avatar">
+            <img src="https://YuxuanGIS.github.io/images/avatar.png?v=1601644140543" class="avatar">
         </div>
         <div class="sitename">YuxuanGIS</div>
-        <span class="describtion" data-text='["我频繁记录着，只因为生活太值得"]'>&nbsp;</span>
+        <span class="describtion" data-text='["GIS=Geography+IT+Study"]'>&nbsp;</span>
         
         <div class="search">
             <!-- <input type="text" class="search-input" placeholder="标题搜索(●'◡'●)" /> -->
@@ -82,54 +82,15 @@
     </div>
     
     
-    <div class="mchocie describtion">
-        <a href="https://YuxuanGIS.github.io/friends" class="menubutton">友人帐</a>
-    </div>
-    
     <hr>
     <div id="footinfo"> | Theme: <a
         href="https://github.com/850552586/gridea-theme-fog">Fog</a></div>
-    
-    <div class="sitetime"><div id="sitegotimeDate">载入天数...</div>
-    <div id="sitegotimes">载入时分秒...</div></div>
-    <div id="cussitetime" style="display:none">01/10/2020</div>
     
     
     </div>
 
 
 <script src="https://YuxuanGIS.github.io/media/js/wordshow.js"></script>
-    
-    <script>
-        //----------------------站点运行时间
-        var now = new Date();
-
-        function createtime() {
-            var sitegotime = document.getElementById("cussitetime").innerHTML + " 00:00:00";
-            var grt = new Date(sitegotime); //此处修改你的建站时间或者网站上线时间
-            now.setTime(now.getTime() + 250);
-            days = (now - grt) / 1000 / 60 / 60 / 24;
-            dnum = Math.floor(days);
-            hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
-            hnum = Math.floor(hours);
-            if (String(hnum).length == 1) {
-                hnum = "0" + hnum;
-            }
-            minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
-            mnum = Math.floor(minutes);
-            if (String(mnum).length == 1) {
-                mnum = "0" + mnum;
-            }
-            seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-            snum = Math.round(seconds);
-            if (String(snum).length == 1) {
-                snum = "0" + snum;
-            }
-            document.getElementById("sitegotimeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
-            document.getElementById("sitegotimes").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
-        }
-        setInterval("createtime()", 250);
-    </script>
     
 
 
@@ -284,6 +245,31 @@
     <div class="postshow postlist">
         
         <div id="post" style="width:100%">
+            <img src="https://s1.ax1x.com/2020/10/02/0lbXOU.jpg" class="postimage"
+                onclick="window.location.href= 'https://YuxuanGIS.github.io/post/why-blog/';return false">
+            <div class="posttitlebox">
+                <div class="posttitle" onclick="window.location.href= 'https://YuxuanGIS.github.io/post/why-blog/';return false">
+                    Why blog？
+                </div>
+            </div>
+        </div>
+        <div class="postinfo">
+            <div class="postdate"><i class="fa fa-calendar"></i>2020-10-02</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
+            <div class="posttag">
+                
+                <a href="https://YuxuanGIS.github.io/tag/XFOE6voIB/" class="postlink">
+                    <i class="fa fa-tag"></i> about
+                </a>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="postshow postlist">
+        
+        <div id="post" style="width:100%">
             <img src="https://s1.ax1x.com/2020/09/10/wJG34J.jpg" class="postimage"
                 onclick="window.location.href= 'https://YuxuanGIS.github.io/post/openlayers-de-ji-ben-gai-nian/';return false">
             <div class="posttitlebox">
@@ -319,7 +305,7 @@
         </div>
         <div class="postinfo">
             <div class="postdate"><i class="fa fa-calendar"></i>2020-10-01</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 3 min read</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
             <div class="posttag">
                 
                 <a href="https://YuxuanGIS.github.io/tag/XFOE6voIB/" class="postlink">
@@ -537,9 +523,6 @@
           <li><a href="https://YuxuanGIS.github.io/talk">说说</a></li>
           
           
-          <li><a href="https://YuxuanGIS.github.io/friends">友链</a></li>
-
-          
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -579,7 +562,7 @@
             <!-- 移动端欢迎页 -->
 <div class="welcome">
     <div class="avatar-border">
-        <img src="https://YuxuanGIS.github.io/images/avatar.png?v=1601620650302" class="avatar">
+        <img src="https://YuxuanGIS.github.io/images/avatar.png?v=1601644140543" class="avatar">
     </div>
     <span class="mobiledescribtion"></span>
 </div>
@@ -593,7 +576,7 @@
         bgurl = bgurl.replace("\\", "/");
     welcome.css("background", "url('" + bgurl + "')");
     var mobiledes = document.querySelector(".mobiledescribtion");
-    var text = "我频繁记录着，只因为生活太值得";
+    var text = "GIS=Geography+IT+Study";
     // 当前显示第几个字
     var mobilecharIndex = 1;
     // 每个字显示间隔默认是500毫秒
@@ -658,6 +641,31 @@
     <div class="postshow postlist">
         
         <div id="post" style="width:100%">
+            <img src="https://s1.ax1x.com/2020/10/02/0lbXOU.jpg" class="postimage"
+                onclick="window.location.href= 'https://YuxuanGIS.github.io/post/why-blog/';return false">
+            <div class="posttitlebox">
+                <div class="posttitle" onclick="window.location.href= 'https://YuxuanGIS.github.io/post/why-blog/';return false">
+                    Why blog？
+                </div>
+            </div>
+        </div>
+        <div class="postinfo">
+            <div class="postdate"><i class="fa fa-calendar"></i>2020-10-02</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
+            <div class="posttag">
+                
+                <a href="https://YuxuanGIS.github.io/tag/XFOE6voIB/" class="postlink">
+                    <i class="fa fa-tag"></i> about
+                </a>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="postshow postlist">
+        
+        <div id="post" style="width:100%">
             <img src="https://s1.ax1x.com/2020/09/10/wJG34J.jpg" class="postimage"
                 onclick="window.location.href= 'https://YuxuanGIS.github.io/post/openlayers-de-ji-ben-gai-nian/';return false">
             <div class="posttitlebox">
@@ -693,7 +701,7 @@
         </div>
         <div class="postinfo">
             <div class="postdate"><i class="fa fa-calendar"></i>2020-10-01</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 3 min read</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 2 min read</div>
             <div class="posttag">
                 
                 <a href="https://YuxuanGIS.github.io/tag/XFOE6voIB/" class="postlink">

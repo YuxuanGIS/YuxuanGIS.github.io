@@ -2,14 +2,30 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://YuxuanGIS.github.io</id>
     <title>YuxuanGIS</title>
-    <updated>2020-10-02T06:38:37.904Z</updated>
+    <updated>2020-10-02T13:09:02.049Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://YuxuanGIS.github.io"/>
     <link rel="self" href="https://YuxuanGIS.github.io/atom.xml"/>
-    <subtitle>我频繁记录着，只因为生活太值得</subtitle>
+    <subtitle>GIS=Geography+IT+Study</subtitle>
     <logo>https://YuxuanGIS.github.io/images/avatar.png</logo>
     <icon>https://YuxuanGIS.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, YuxuanGIS</rights>
+    <entry>
+        <title type="html"><![CDATA[Why blog？]]></title>
+        <id>https://YuxuanGIS.github.io/post/why-blog/</id>
+        <link href="https://YuxuanGIS.github.io/post/why-blog/">
+        </link>
+        <updated>2020-10-02T09:50:22.000Z</updated>
+        <content type="html"><![CDATA[<p>记录生活，分享感受，就这么简单。</p>
+<p>先说记录生活。我曾坚持记了两个多月的日记，但是隔了两个月后回首再看，发现这样的记录没有任何的意义。每天花费时间写下一堆诸如今天吃了啥，玩了啥这样的流水账让“记录生活”这一初衷变得乏味，我珍视的记忆与想法也被淹没在了无趣的沼泽地里。我不喜欢无趣。</p>
+<p>记录要对得住记录本身，写出来的东西是需要经过思考与筛选的，博客也是一个和自己谈心与辩论的小宇宙。</p>
+<p>我希望，每当我回头再去看我所写的博客时，我能发现自己正在通过这样的方式在不断的成长。这种成长可以让我不断修正自己的错误，也能带我找到曾经的自己。在一个私密的博客里，我不需要讨好他人，可以从容地面对真实的自己。</p>
+<p>再说分享感受。QQ空间或者朋友圈都可以分享感受，但是这些总给我一种不安全感。也许有些内容不想给老师/父母/亲朋看到，也许是不想留下留下让人尴尬得脚趾抓地的黑历史。而且我觉得发动态似乎并没有满足我的心理动机，而只是满足了我一时集赞的虚荣心。</p>
+<p>朋友圈里的人很多很杂，我懒得费心思去拉一个黑名单，也不想为了揣测他人的想法而搞得我自己战战兢兢。我不需要刷存在感，也不需要获得认可，更不需要经营我所谓的“正面形象”。所以还是算了吧，就不发了，久而久之也就潜水很久了。</p>
+<p>一个人的QQ空间或者朋友圈是可以体现一个人的一部分，但也只是一部分，代表不了什么。发和不发，只不过是人们自己的一种选择罢了。</p>
+<p>生活是活给自己看的，不是么？</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[OpenLayers的最基本要素]]></title>
         <id>https://YuxuanGIS.github.io/post/openlayers-de-ji-ben-gai-nian/</id>
@@ -95,25 +111,25 @@ new Map({
         </link>
         <updated>2020-10-01T12:00:00.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
-<p>欢迎来到我的个人网站~🤝这里通常不会有什么访客，所以很高兴可以在这里遇见你！💖</p>
+<p>欢迎来到我的个人网站~🤝通常情况下，这个网站很难被人所发现，所以很高兴可以在这里遇见你！💖</p>
 </blockquote>
 <h2 id="关于本站">🏠 关于本站</h2>
-<p>这个网站主要用来记录自己日常生活里发生的有趣的一切，也顺便写下自己学习的历程与所思所想。<br>
-因为自己还没有系统地学过前端和网页搭建的知识，所以我没有选择购买域名和主机去进行常见的WordPress建站，而是使用了傻瓜式的Gridea做静态博客客户端。<br>
-我在网页的左下角留了一些音乐，如果你感兴趣的的话可以去听一听，enjoy✨！</p>
+<p>这个网站主要用来记录自己日常生活里发生的有趣的一切，也顺便写下自己学习历程中的所思所想。<br>
+因为自己还没有系统地学过前端和网页搭建的知识，所以我没有选择购买域名和主机去进行常见的WordPress建站，而是使用了傻瓜式的Gridea做静态博客客户端。</p>
 <h2 id="博主是谁">👨‍💻 博主是谁</h2>
 <p>Hi，我是叶宇轩 YeYuxuan。<br>
-正常配置，传统中锋，白日梦患者，代码搬运工，炉石怀旧服玩家，有趣事物爱好者。<br>
-01年生人，目前就读于南京师范大学地理科学学院，大二ing。<br>
-单身，性别男，天秤座，完美主义，轻微洁癖。<br>
-南京土著，会讲一点南京话，但是味道不是很纯正。</p>
+正常配置，传统中锋，南京土著，白日梦患者，代码搬运工，炉石怀旧服玩家，朋友圈一级潜水员。<br>
+01年生，目前就读于南京师范大学地理科学学院，大二ing。<br>
+单身，性别男，天秤座，完美主义，轻微洁癖。🏹</p>
 <h2 id="兴趣爱好">🤺 兴趣爱好</h2>
-<p><strong>喜欢旅游</strong>：当然，我所喜欢的不是朋友圈打卡（事实上我也不发朋友圈或者qq空间之类的）；我在意的是脑海里一切美好的记忆和景色。<br>
-<strong>喜欢运动</strong>：打球带给我竞技的快感；跑步使我空旷、平静与自由；爬山让我感到视野开阔。<br>
-<strong>喜欢推理</strong>：剧本杀十级选手，东野圭吾以及一些推理小说的忠实读者。<br>
-<strong>喜欢听歌</strong>：很多音乐都会与我的内心共鸣，唤醒一段过往的记忆或心情。我也在网站左下角分享了一些我喜欢的音乐~<br>
-<strong>喜欢听故事</strong>：B乎上充满了“xx是一种怎样的体验”之类的问题，而无论是B乎还是豆瓣，有趣的人间乐章总能带给我一瞬的身临其境，喂养我永不枯竭的好奇心。<br>
-<strong>喜欢科技感</strong>：科幻电影影迷，NASA跟随者，sspai &amp; topbook &amp; testv 多年观众，买不起mbp的忠实果粉，智能家居狂热观望者。我格外喜欢AirPods Pro在闹市里切换通透模式时那一瞬的烟火气，也希望星空与宇宙的浪漫能长存我心。</p>
+<ul>
+<li><strong>喜欢旅游</strong>：当然，我所喜欢的不是朋友圈打卡（事实上我也不发朋友圈或者qq空间之类的）；我在意的是脑海里一切美好的记忆和景色。</li>
+<li><strong>喜欢运动</strong>：喜欢跑步，喜欢爬山，喜欢骑车，喜欢跳绳，喜欢扣篮。</li>
+<li><strong>喜欢推理</strong>：剧本杀十级选手，东野圭吾著名读者。</li>
+<li><strong>喜欢听歌</strong>：我听歌向来随缘，只要能说服我耳朵的音乐我都喜欢，所以我听的音乐种类很杂，也基本上不挑歌手...</li>
+<li><strong>喜欢听故事</strong>：B乎上充满了“xx是一种怎样的体验”之类的问题，而无论是B乎还是豆瓣，有趣的人间乐章总能带给我一瞬的身临其境，满足我的好奇心。</li>
+<li><strong>喜欢科技感</strong>：sspai &amp; topbook &amp; testv 多年观众，不用mbp的忠实果粉，智能家居狂热观望者。By the way，我格外喜欢AirPods Pro在闹市里切换通透模式时那一瞬的烟火气。</li>
+</ul>
 <h2 id="联系我呀">📬 联系我呀</h2>
 <p>下面是我主要的联系方式📡：<br>
 Email：yuxuanye145@gmail.com<br>
