@@ -2067,3 +2067,24 @@ a {
     display: none;
   }
 }
+
+      .posttitlewithoutimg {
+        color: #f8f9fa;
+      }
+    
+      .sitename {
+        color: #339af0;
+      }
+    
+        .describtion {
+          color: #343a40;
+        }
+      
+        .menubutton {
+          color: #3b5bdb;
+        }
+      
+        .posttitle {
+          color: #f8f9fa;
+        }
+      

@@ -4,8 +4,10 @@
     <meta name="description" content="Layer
 图层是源数据的可视化表示。 OpenLayers 有四种基本类型的图层:
 
+ol/layer/Tile - 呈现按特定分辨率的缩放级别组织的网格中提供拼接图像的源
 
-ol/layer/Tile - 呈现按特定分辨率的缩放级别组织的网格中提供拼接图像的源【Renders sources that provide ti..." />
+
+【Renders sources that provide ..." />
     <meta name="keywords" content="OpenLayers" />
     <link rel="stylesheet" href="https://YuxuanGIS.github.io/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://YuxuanGIS.github.io/styles/main.css">
@@ -121,6 +123,8 @@ ol/layer/Tile - 呈现按特定分辨率的缩放级别组织的网格中提供�
           
           
           
+          <li><a href="https://YuxuanGIS.github.io/talk">说说</a></li>
+          
           
         </ul>
       </div><!-- /.navbar-collapse -->
@@ -164,7 +168,7 @@ ol/layer/Tile - 呈现按特定分辨率的缩放级别组织的网格中提供�
     
     <div id=side>
         <div class="avatar-border">
-            <img src="https://YuxuanGIS.github.io/images/avatar.png?v=1601610878207" class="avatar">
+            <img src="https://YuxuanGIS.github.io/images/avatar.png?v=1601617799645" class="avatar">
         </div>
         <div class="sitename">YuxuanGIS</div>
         <span class="describtion" data-text='["地承千古人文精华，理蕴万世自然法则。"]'>&nbsp;</span>
@@ -179,12 +183,14 @@ ol/layer/Tile - 呈现按特定分辨率的缩放级别组织的网格中提供�
         <span>社交按钮</span>
         
         
+        <a onclick="showqq()"><i style="font-size: 20px;"><img class="icon" src="https://YuxuanGIS.github.io/media/images/QQ.png" alt=""></i></a>
+        
         
         
         
         
     </div>
-    <div id="qq" style="display:none"></div>
+    <div id="qq" style="display:none">1260480627</div>
     
     
     <div class="mchocie describtion">
@@ -218,6 +224,10 @@ ol/layer/Tile - 呈现按特定分辨率的缩放级别组织的网格中提供�
     </div>
     
     
+    
+    <div class="mchocie describtion">
+        <a href="https://YuxuanGIS.github.io/talk" class="menubutton">说说</a>
+    </div>
     
     
     <hr>
@@ -401,7 +411,7 @@ ol/layer/Tile - 呈现按特定分辨率的缩放级别组织的网格中提供�
             
         <div id="articlecontent">
             <div id="texttitle" style="text-align: center">
-                <h2>OpenLayers的基本概念</h2>
+                <h2>OpenLayers的最基本要素</h2>
                 <!-- id 将作为查询条件 -->
                 <div id="pl" style="display:none">https://YuxuanGIS.github.io/post/openlayers-de-ji-ben-gai-nian/</div>
                 <div id="rootaddr" style="display:none">https://YuxuanGIS.github.io</div>
@@ -414,21 +424,31 @@ ol/layer/Tile - 呈现按特定分辨率的缩放级别组织的网格中提供�
                 <h2 id="layer">Layer</h2>
 <p>图层是源数据的可视化表示。 OpenLayers 有四种基本类型的图层:</p>
 <ul>
-<li>
-<p><code>ol/layer/Tile</code> - 呈现按特定分辨率的缩放级别组织的网格中提供拼接图像的源【Renders sources that provide tiled images in grids that are organized by zoom levels for specific resolutions. 】</p>
-</li>
-<li>
-<p><code>ol/layer/Image</code> - 呈现以任意程度和分辨率提供地图映像的源【Renders sources that provide map images at arbitrary extents and resolutions. 】</p>
-</li>
-<li>
-<p><code>ol/layer/Vector</code> - 在客户端呈现矢量数据【Renders vector data client-side. 】</p>
-</li>
-<li>
-<p><code>ol/layer/VectorTile</code> - 呈现以矢量块提供的数据【Renders data that is provided as vector tiles】</p>
-</li>
+<li><code>ol/layer/Tile</code> - 呈现按特定分辨率的缩放级别组织的网格中提供拼接图像的<strong>源</strong></li>
 </ul>
+<blockquote>
+<p>【Renders sources that provide tiled images in grids that are organized by zoom levels for specific resolutions. 】</p>
+</blockquote>
+<ul>
+<li><code>ol/layer/Image</code> - 呈现以任意程度和分辨率提供地图映像的源</li>
+</ul>
+<blockquote>
+<p>【Renders sources that provide map images at arbitrary extents and resolutions. 】</p>
+</blockquote>
+<ul>
+<li><code>ol/layer/Vector</code> - 在客户端呈现矢量数据</li>
+</ul>
+<blockquote>
+<p>【Renders vector data client-side. 】</p>
+</blockquote>
+<ul>
+<li><code>ol/layer/VectorTile</code> - 呈现以矢量块提供的数据</li>
+</ul>
+<blockquote>
+<p>【Renders data that is provided as vector tiles】</p>
+</blockquote>
 <h2 id="source">Source</h2>
-<p>为了获得一个层的远程数据，OpenLayers 使用 <code>ol/source/Source</code> 子类。可用的服务有免费的或商业的瓦片地图，如 OpenStreetMap 或 Bing；如 WMS 或 WMTS的OGC源；以及类似 GeoJSON 或 KML 格式的矢量数据。</p>
+<p>为了获得一个层的远程数据，OpenLayers 使用 <code>ol/source/Source</code> 子类。可用的服务有如 OpenStreetMap 或 Bing这样免费或商业的瓦片地图，；有如WMS 或 WMTS的OGC源；也有类似 GeoJSON 或 KML 格式的矢量数据。</p>
 <pre><code class="language-JavaScript">import OSM from 'ol/source/OSM';
 
 var osmSource = OSM();
@@ -499,7 +519,7 @@ new Map({
             
             <div class="postfooter">
                 <ul class="post-copyright">
-                    <li><strong>文章作者：</strong></li>
+                    <li><strong>文章作者：</strong>Yuxuan</li>
             <li><strong>原文链接：</strong>https://YuxuanGIS.github.io/post/openlayers-de-ji-ben-gai-nian/</li>
             <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用<i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA
                 许可协议。转载请注明出处！</li>
@@ -547,6 +567,70 @@ new Map({
             </div>
             
         
+        <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+</head>
+<body>
+    <div class="miniMode">
+        <meting-js id="myaplayer" server="netease" type="playlist" fixed="true" order="default">
+        </meting-js>
+    </div>   
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+<script>
+    var aplayerid = "2945691988";
+    var aplayerserver = "netease";
+    var aplayerorder = "default";
+    var aplayerautoplay = "false";
+    var aplayer = $("#myaplayer");
+    aplayer.attr("server",aplayerserver);
+    aplayer.attr("id",aplayerid);
+    aplayer.attr("order",aplayerorder);
+    if(aplayerautoplay=="true")
+        aplayer.attr("autoplay","true");
+</script>
+
+<script src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/Aplayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+<script>
+    function aplayerbtnInit(){
+        var player = document.querySelectorAll('meting-js')[0].aplayer;
+        player.lrc.hide();
+        var mbabtn = $("#mbaplayer");
+        if(player.paused==false)
+        {
+            mbabtn.removeClass("fa-play-circle-o");
+            mbabtn.addClass("fa-pause-circle");
+        }
+        else
+        {
+            mbabtn.addClass("fa-play-circle-o");
+            mbabtn.removeClass("fa-pause-circle");
+        }
+    }
+
+    function aplayerPlay(){
+        var player = document.querySelectorAll('meting-js')[0].aplayer;
+        var mbabtn = $("#mbaplayer");
+        if(player.paused==true)
+        {
+            player.play();
+            mbabtn.removeClass("fa-play-circle-o");
+            mbabtn.addClass("fa-pause-circle");
+        }
+        else
+        {
+            player.pause();
+            mbabtn.addClass("fa-play-circle-o");
+            mbabtn.removeClass("fa-pause-circle");
+        }
+    }
+</script>
+        
         <div class="toc-container">
             <ul class="markdownIt-TOC">
 <li>
@@ -570,7 +654,7 @@ new Map({
             </div>
         </div>
     </div>
-    <div id="bgchoice" style="display: none"></div>
+    <div id="bgchoice" style="display: none">link</div>
     
     <div id="bgurl" style="display:none"></div>
     
@@ -797,7 +881,7 @@ new Map({
                 var nc = new NewCounter();
                 nc.save({
                     time: 1,
-                    title: "OpenLayers的基本概念",
+                    title: "OpenLayers的最基本要素",
                     url: pl,
                     xid: pl,
                 }).then(function (object) {
