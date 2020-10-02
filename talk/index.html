@@ -21,7 +21,7 @@
     
     <div id=side>
         <div class="avatar-border">
-            <img src="https://YuxuanGIS.github.io/images/avatar.png?v=1601644140543" class="avatar">
+            <img src="https://YuxuanGIS.github.io/images/avatar.png?v=1601647247925" class="avatar">
         </div>
         <div class="sitename">YuxuanGIS</div>
         <span class="describtion" data-text='["GIS=Geography+IT+Study"]'>&nbsp;</span>
@@ -80,6 +80,10 @@
         <a href="https://YuxuanGIS.github.io/talk" class="menubutton">说说</a>
     </div>
     
+    
+    <div class="mchocie describtion">
+        <a href="https://YuxuanGIS.github.io/friends" class="menubutton">友人帐</a>
+    </div>
     
     <hr>
     <div id="footinfo"> | Theme: <a
@@ -305,6 +309,9 @@
           <li><a href="https://YuxuanGIS.github.io/talk">说说</a></li>
           
           
+          <li><a href="https://YuxuanGIS.github.io/friends">友链</a></li>
+
+          
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -479,7 +486,7 @@
     add();
 
     function get() {
-        var t = JSON.parse('[{"author":"十月一日","img":"https://s1.ax1x.com/2020/10/01/0M7CF0.md.jpg","text":"“七月在野，八月在宇，九月在户，十月蟋蟀入我床下。”​——《诗经》","time":"2020/10/1"},{"author":"Paul Graham《不能说的话》","img":"","text":"如果自己就是潮水的一部分 ，怎么能看见潮流的方向呢？你只能永远保持质疑，问自己，什么话是我不能说的？为什么？","time":"2020/10/2"}]');
+        var t = JSON.parse('[{"author":"十月一日","img":"https://s1.ax1x.com/2020/10/01/0M7CF0.md.jpg","text":"“七月在野，八月在宇，九月在户，十月蟋蟀入我床下。”​——《诗经》","time":"2020/10/1"},{"author":"Paul Graham《不能说的话》","img":"https://s1.ax1x.com/2020/10/01/0M7AlF.jpg","text":"如果自己就是潮水的一部分 ，怎么能看见潮流的方向呢？你只能永远保持质疑，问自己，什么话是我不能说的？为什么？","time":"2020/10/2"}]');
         talkindex = t.length - 1;
         for (var i = t.length - 1; i >= 0; i--) {
             var d = {};
@@ -511,7 +518,7 @@
                 <img src="' + talks[i].img + '" class="talkimg"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="https://YuxuanGIS.github.io/images/avatar.png?v=1601644140543">\
+                        <img class="intro1" src="https://YuxuanGIS.github.io/images/avatar.png?v=1601647247925">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -524,7 +531,7 @@
             <div class="talk" v-for="t in talks"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="https://YuxuanGIS.github.io/images/avatar.png?v=1601644140543">\
+                        <img class="intro1" src="https://YuxuanGIS.github.io/images/avatar.png?v=1601647247925">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\

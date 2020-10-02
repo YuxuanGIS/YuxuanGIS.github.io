@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://YuxuanGIS.github.io</id>
     <title>YuxuanGIS</title>
-    <updated>2020-10-02T13:09:19.435Z</updated>
+    <updated>2020-10-02T14:11:21.542Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://YuxuanGIS.github.io"/>
     <link rel="self" href="https://YuxuanGIS.github.io/atom.xml"/>
@@ -24,117 +24,6 @@
 <p>朋友圈里的人很多很杂，我懒得费心思去拉一个黑名单，也不想为了揣测他人的想法而搞得我自己战战兢兢。我不需要刷存在感，也不需要获得认可，更不需要经营我所谓的“正面形象”。所以还是算了吧，就不发了，久而久之也就潜水很久了。</p>
 <p>一个人的QQ空间或者朋友圈是可以体现一个人的一部分，但也只是一部分，代表不了什么。发和不发，只不过是人们自己的一种选择罢了。</p>
 <p>生活是活给自己看的，不是么？</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[OpenLayers的最基本要素]]></title>
-        <id>https://YuxuanGIS.github.io/post/openlayers-de-ji-ben-gai-nian/</id>
-        <link href="https://YuxuanGIS.github.io/post/openlayers-de-ji-ben-gai-nian/">
-        </link>
-        <updated>2020-10-01T13:31:44.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="layer">Layer</h2>
-<p>图层是源数据的可视化表示。 OpenLayers 有四种基本类型的图层:</p>
-<ul>
-<li><code>ol/layer/Tile</code> - 呈现按<strong>特定分辨率的缩放级别</strong>组织的网格中提供拼接图像的源</li>
-</ul>
-<blockquote>
-<p><em>【Renders sources that provide tiled images in grids that are organized by zoom levels for specific resolutions. 】</em></p>
-</blockquote>
-<ul>
-<li><code>ol/layer/Image</code> - 呈现以<strong>任意程度和分辨率提</strong>供地图映像的源</li>
-</ul>
-<blockquote>
-<p><em>【Renders sources that provide map images at arbitrary extents and resolutions. 】</em></p>
-</blockquote>
-<ul>
-<li><code>ol/layer/Vector</code> - 在客户端呈现矢量数据</li>
-</ul>
-<blockquote>
-<p><em>【Renders vector data client-side. 】</em></p>
-</blockquote>
-<ul>
-<li><code>ol/layer/VectorTile</code> - 呈现以<strong>矢量块</strong>提供的数据</li>
-</ul>
-<blockquote>
-<p>*【Renders data that is provided as vector tiles】 *</p>
-</blockquote>
-<h2 id="source">Source</h2>
-<p>为了获得一个层的远程数据，OpenLayers 使用 <code>ol/source/Source</code> 子类。可用的服务有如 OpenStreetMap 或 Bing这样免费或商业的瓦片地图，；有如WMS 或 WMTS的OGC源；也有类似 GeoJSON 或 KML 格式的矢量数据。</p>
-<pre><code class="language-JavaScript">import OSM from 'ol/source/OSM';
-
-var osmSource = OSM();
-</code></pre>
-<h2 id="map">Map</h2>
-<p>下面的标记可用于创建一个包含我们所需地图的<code>&lt;div&gt;</code>：</p>
-<pre><code class="language-HTML">&lt;div id=&quot;map&quot; style=&quot;width: 100%, height: 400px&quot;&gt;&lt;/div&gt;
-</code></pre>
-<p>下面的脚本构造了一个地图，该地图在上面的<code>&lt;div&gt;</code>中呈现，使用元素的<code>map</code> id 作为选择器。</p>
-<pre><code class="language-JavaScript">import Map from 'ol/Map';
-var map = new Map({target: 'map'});
-</code></pre>
-<h2 id="view">View</h2>
-<p>view关心的是地图的中心、缩放级别和投影等：</p>
-<pre><code class="language-JavaScript">import View from 'ol/View';
-
-map.setView(new View({
-  center: [0, 0],
-  zoom: 2
-}));
-</code></pre>
-<p>View有一个投影(<code>Projection</code>)。投影决定了<code>center</code>的坐标系和地图分辨率计算的单位。如果没有指定，则默认投影是 Spherical Mercator (EPSG: 3857) ，以米作为地图单位。</p>
-<p><code>zoom</code>选项是指定地图分辨率的方便方法。可用的缩放级别由 <code>maxZoom</code> (默认值: 28)、 <code>zoomFactor</code> (默认值: 2)和 <code>maxResolution</code>(默认值的计算方式是使投影的有效范围符合256x256像素贴片)决定。从缩放级别0开始，分辨率为每像素的<code>maxResolution</code>，然后通过<strong>用 <code>zoomFactor</code> 除以前一个缩放级别的分辨率</strong>来计算后续的缩放级别，直到达到<code>maxZoom</code>。</p>
-<h2 id="总结">总结</h2>
-<p>把上面四个整合在一起，就有了下面的完整代码：</p>
-<pre><code class="language-JavaScript">import Map from 'ol/Map';
-import View from 'ol/View';
-import OSM from 'ol/source/OSM';
-import TileLayer from 'ol/layer/Tile';
-
-new Map({
-  layers: [
-  new TileLayer({source: new OSM()})
-
-  ],
-  view: new View({
-    center: [0, 0],
-    zoom: 2
-  }),
-  target: 'map'
-}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[关于]]></title>
-        <id>https://YuxuanGIS.github.io/post/about/</id>
-        <link href="https://YuxuanGIS.github.io/post/about/">
-        </link>
-        <updated>2020-10-01T12:00:00.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
-<p>欢迎来到我的个人网站~🤝通常情况下，这个网站很难被人所发现，所以很高兴可以在这里遇见你！💖</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<p>这个网站主要用来记录自己日常生活里发生的有趣的一切，也顺便写下自己学习历程中的所思所想。<br>
-因为自己还没有系统地学过前端和网页搭建的知识，所以我没有选择购买域名和主机去进行常见的WordPress建站，而是使用了傻瓜式的Gridea做静态博客客户端。</p>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<p>Hi，我是叶宇轩 YeYuxuan。<br>
-正常配置，传统中锋，南京土著，白日梦患者，代码搬运工，炉石怀旧服玩家，朋友圈一级潜水员。<br>
-01年生，目前就读于南京师范大学地理科学学院，大二ing。<br>
-单身，性别男，天秤座，完美主义，轻微洁癖。🏹</p>
-<h2 id="兴趣爱好">🤺 兴趣爱好</h2>
-<ul>
-<li><strong>喜欢旅游</strong>：当然，我所喜欢的不是朋友圈打卡（事实上我也不发朋友圈或者qq空间之类的）；我在意的是脑海里一切美好的记忆和景色。</li>
-<li><strong>喜欢运动</strong>：喜欢跑步，喜欢爬山，喜欢骑车，喜欢跳绳，喜欢扣篮。</li>
-<li><strong>喜欢推理</strong>：剧本杀十级选手，东野圭吾著名读者。</li>
-<li><strong>喜欢听歌</strong>：我听歌向来随缘，只要能说服我耳朵的音乐我都喜欢，所以我听的音乐种类很杂，也基本上不挑歌手...</li>
-<li><strong>喜欢听故事</strong>：B乎上充满了“xx是一种怎样的体验”之类的问题，而无论是B乎还是豆瓣，有趣的人间乐章总能带给我一瞬的身临其境，满足我的好奇心。</li>
-<li><strong>喜欢科技感</strong>：sspai &amp; topbook &amp; testv 多年观众，不用mbp的忠实果粉，智能家居狂热观望者。By the way，我格外喜欢AirPods Pro在闹市里切换通透模式时那一瞬的烟火气。</li>
-</ul>
-<h2 id="联系我呀">📬 联系我呀</h2>
-<p>下面是我主要的联系方式📡：<br>
-Email：yuxuanye145@gmail.com<br>
-QQ：1260480627<br>
-Wechat：yyx1260480627</p>
 ]]></content>
     </entry>
 </feed>
