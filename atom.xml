@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://YuxuanGIS.github.io</id>
     <title>YuxuanGIS</title>
-    <updated>2020-10-01T13:28:45.612Z</updated>
+    <updated>2020-10-02T03:54:41.138Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://YuxuanGIS.github.io"/>
     <link rel="self" href="https://YuxuanGIS.github.io/atom.xml"/>
@@ -11,11 +11,78 @@
     <icon>https://YuxuanGIS.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, YuxuanGIS</rights>
     <entry>
+        <title type="html"><![CDATA[OpenLayers的基本概念]]></title>
+        <id>https://YuxuanGIS.github.io/post/openlayers-de-ji-ben-gai-nian/</id>
+        <link href="https://YuxuanGIS.github.io/post/openlayers-de-ji-ben-gai-nian/">
+        </link>
+        <updated>2020-10-01T13:31:44.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="layer">Layer</h2>
+<p>图层是源数据的可视化表示。 OpenLayers 有四种基本类型的图层:</p>
+<ul>
+<li>
+<p><code>ol/layer/Tile</code> - 呈现按特定分辨率的缩放级别组织的网格中提供拼接图像的源【Renders sources that provide tiled images in grids that are organized by zoom levels for specific resolutions. 】</p>
+</li>
+<li>
+<p><code>ol/layer/Image</code> - 呈现以任意程度和分辨率提供地图映像的源【Renders sources that provide map images at arbitrary extents and resolutions. 】</p>
+</li>
+<li>
+<p><code>ol/layer/Vector</code> - 在客户端呈现矢量数据【Renders vector data client-side. 】</p>
+</li>
+<li>
+<p><code>ol/layer/VectorTile</code> - 呈现以矢量块提供的数据【Renders data that is provided as vector tiles】</p>
+</li>
+</ul>
+<h2 id="source">Source</h2>
+<p>为了获得一个层的远程数据，OpenLayers 使用 <code>ol/source/Source</code> 子类。可用的服务有免费的或商业的瓦片地图，如 OpenStreetMap 或 Bing；如 WMS 或 WMTS的OGC源；以及类似 GeoJSON 或 KML 格式的矢量数据。</p>
+<pre><code class="language-JavaScript">import OSM from 'ol/source/OSM';
+
+var osmSource = OSM();
+</code></pre>
+<h2 id="map">Map</h2>
+<p>下面的标记可用于创建一个包含我们所需地图的<code>&lt;div&gt;</code>：</p>
+<pre><code class="language-HTML">&lt;div id=&quot;map&quot; style=&quot;width: 100%, height: 400px&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>下面的脚本构造了一个地图，该地图在上面的<code>&lt;div&gt;</code>中呈现，使用元素的<code>map</code> id 作为选择器。</p>
+<pre><code class="language-JavaScript">import Map from 'ol/Map';
+var map = new Map({target: 'map'});
+</code></pre>
+<h2 id="view">View</h2>
+<p>view关心的是地图的中心、缩放级别和投影等：</p>
+<pre><code class="language-JavaScript">import View from 'ol/View';
+
+map.setView(new View({
+  center: [0, 0],
+  zoom: 2
+}));
+</code></pre>
+<p>View有一个投影(<code>Projection</code>)。投影决定了<code>center</code>的坐标系和地图分辨率计算的单位。如果没有指定，则默认投影是 Spherical Mercator (EPSG: 3857) ，以米作为地图单位。</p>
+<p><code>zoom</code>选项是指定地图分辨率的方便方法。可用的缩放级别由 <code>maxZoom</code> (默认值: 28)、 <code>zoomFactor</code> (默认值: 2)和 <code>maxResolution</code>(默认值的计算方式是使投影的有效范围符合256x256像素贴片)决定。从缩放级别0开始，分辨率为每像素的<code>maxResolution</code>，然后通过用 <code>zoomFactor</code> 除以前一个缩放级别的分辨率来计算后续的缩放级别，直到达到<code>maxZoom</code>。</p>
+<h2 id="总结">总结</h2>
+<pre><code class="language-JavaScript">import Map from 'ol/Map';
+import View from 'ol/View';
+import OSM from 'ol/source/OSM';
+import TileLayer from 'ol/layer/Tile';
+
+new Map({
+  layers: [
+  new TileLayer({source: new OSM()})
+
+  ],
+  view: new View({
+    center: [0, 0],
+    zoom: 2
+  }),
+  target: 'map'
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[关于]]></title>
         <id>https://YuxuanGIS.github.io/post/about/</id>
         <link href="https://YuxuanGIS.github.io/post/about/">
         </link>
-        <updated>2020-09-09T11:09:48.000Z</updated>
+        <updated>2020-10-01T12:00:00.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
 <p>欢迎来到我的个人网站~🤝这里通常不会有什么访客，所以很高兴可以在这里遇见你！</p>
 </blockquote>
